@@ -22,22 +22,18 @@ $(O_DIR):
 $(NAME): $(OBJ)
 	ar rcs $@ $(O_DIR)*.o
 	ranlib $@
-	echo "---[$@ finished]---"
 
 $(O_DIR)%.o: $(S_DIR)%.c
 	$(CC) $(CFLAGS) -o $@ -c $< -I$(H_DIR) 
-	echo "---[compiled $<]---"
 
 clean:
 	-rm -rf	$(O_DIR)
-	echo "---[Cleaned]---"
 
 fclean: clean
 	-rm -rf $(NAME)
-	echo "---[Scrubbed]---"
 
 re: fclean all
 
-.SILENT:
+#.SILENT:
 
 .PHONY: all clean fclean re
