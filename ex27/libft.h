@@ -1,6 +1,7 @@
 #ifndef	LIBFT_H
 #define	LIBFT_H
 
+#include <stdio.h>
 #include <unistd.h>
 #include <stdlib.h>
 #include <fcntl.h>
@@ -15,6 +16,6 @@ void	ft_read_file(char	*file);
 void	ft_putstr(char	*str);
 void	ft_putchar(char c);
 
-int	*ft_reader(int fd, size_t nbytes);
+void	ft_reader(int fd, size_t nbytes);
 
 #endif
