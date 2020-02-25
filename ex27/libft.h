@@ -3,6 +3,7 @@
 
 #include <unistd.h>
 #include <stdlib.h>
+#include <fcntl.h>
 
 typedef struct s_list
 {
@@ -10,7 +11,10 @@ typedef struct s_list
 	struct	s_list	*next;
 }	t_list;
 
-void	ft_read_file(char*);
+void	ft_read_file(char	*file);
+void	ft_putstr(char	*str);
+void	ft_putchar(char c);
 
+int	*ft_reader(int fd, size_t nbytes);
 
 #endif
